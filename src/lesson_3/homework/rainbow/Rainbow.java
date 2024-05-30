@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class Rainbow {
 
-    private String yellow = "жёлтый";
-    private String orange = "оранжевый";
-    private String red = "красный";
-    private String green = "зелёный";
-    private String cyan = "голубой";
-    private String blue = "синий";
-    private String purple = "фиолетовый";
-    private String brown = "коричневый";
+    private final String YELLOW = "жёлтый";
+    private final String ORANGE = "оранжевый";
+    private final String RED = "красный";
+    private final String GREEN = "зелёный";
+    private final String CYAN = "голубой";
+    private final String BLUE = "синий";
+    private final String PURPLE = "фиолетовый";
+    private final String BROWN = "коричневый";
 
     private int colorNum;
     private Scanner in = new Scanner(System.in);
@@ -22,28 +22,28 @@ public class Rainbow {
                 System.out.print("белый");
                 break;
             case 1:
-                System.out.print(yellow);
+                System.out.print(YELLOW);
                 break;
             case 2:
-                System.out.print(orange);
+                System.out.print(ORANGE);
                 break;
             case 3:
-                System.out.print(red);
+                System.out.print(RED);
                 break;
             case 4:
-                System.out.print(green);
+                System.out.print(GREEN);
                 break;
             case 5:
-                System.out.print(cyan);
+                System.out.print(CYAN);
                 break;
             case 6:
-                System.out.print(blue);
+                System.out.print(BLUE);
                 break;
             case 7:
-                System.out.print(purple);
+                System.out.print(PURPLE);
                 break;
             case 8:
-                System.out.print(brown);
+                System.out.print(BROWN);
                 break;
             default:
                 System.out.print("чёрный");
@@ -118,28 +118,28 @@ public class Rainbow {
 
             switch (secondColor) {
                 case 1:
-                    System.out.print(yellow);
+                    System.out.print(YELLOW);
                     break;
                 case 2:
-                    System.out.print(orange);
+                    System.out.print(ORANGE);
                     break;
                 case 3:
-                    System.out.print(red);
+                    System.out.print(RED);
                     break;
                 case 4:
-                    System.out.print(green);
+                    System.out.print(GREEN);
                     break;
                 case 5:
-                    System.out.print(cyan);
+                    System.out.print(CYAN);
                     break;
                 case 6:
-                    System.out.print(blue);
+                    System.out.print(BLUE);
                     break;
                 case 7:
-                    System.out.print(purple);
+                    System.out.print(PURPLE);
                     break;
                 case 8:
-                    System.out.print(brown);
+                    System.out.print(BROWN);
                     break;
             }
 
