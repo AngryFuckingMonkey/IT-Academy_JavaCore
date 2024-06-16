@@ -1,4 +1,4 @@
-package lesson_3.homework.rainbow;
+package homeworks.lesson3.rainbow;
 
 import java.util.Scanner;
 
@@ -48,7 +48,6 @@ public class Rainbow {
             default:
                 System.out.print("чёрный");
         }
-
     }
 
     public void printColor() {
@@ -142,9 +141,6 @@ public class Rainbow {
                     System.out.print(BROWN);
                     break;
             }
-
         }
-
     }
-
 }

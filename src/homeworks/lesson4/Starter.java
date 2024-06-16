@@ -1,4 +1,4 @@
-package lesson_4.homework;
+package homeworks.lesson4;
 
 public class Starter {
 
@@ -32,13 +32,12 @@ public class Starter {
         System.out.println();
 
         Cat[] arrayOfCats = new Cat[5];
+
         for(Cat cat: arrayOfCats) {
             cat = new Cat();
             cat.setRandomName();
             cat.setRandomAge();
             cat.showCatInfo();
         }
-
     }
-
 }

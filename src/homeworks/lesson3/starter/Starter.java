@@ -1,6 +1,6 @@
-package lesson_3.homework.starter;
+package homeworks.lesson3.starter;
 
-import lesson_3.homework.rainbow.Rainbow;
+import homeworks.lesson3.rainbow.Rainbow;
 
 public class Starter {
 
@@ -10,5 +10,4 @@ public class Starter {
         rainbow.printColor();
 
     }
-
 }

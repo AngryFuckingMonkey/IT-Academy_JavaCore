@@ -1,4 +1,4 @@
-package lesson_4.homework;
+package homeworks.lesson4;
 
 import java.util.Random;
 
@@ -6,7 +6,9 @@ public class Cat {
 
     private String name = "Кот";
     private int age = 8;
+
     static final String[] CATS_NAMES = new String[] {"Кот", "Кошак", "Котяш", "Котей", "Котофей", "Псих", "Бешеный", "Безумец", "Шизик", "Маньяк"};
+
     static Random rand = new Random();
 
     Cat(int age, String name) {
@@ -15,7 +17,6 @@ public class Cat {
     }
 
     Cat() {
-
     }
 
     public void setRandomName() {
@@ -45,6 +46,4 @@ public class Cat {
                 ", age=" + age +
                 '}';
     }
-
-
 }
