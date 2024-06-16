@@ -1,9 +1,11 @@
 package homeworks.lesson7;
 
-public class BodyFactory implements RobotCreation <Body> {
+public class BodyFactory implements RobotCreation {
 
-    public Robot createRobot(Robot robot, Body body) {
-        return robot;
+    private final Body[] BODIES = Body.values();
+
+    public void createRobotPart(Robot robot, int bodyIndex) {
+        robot.setBody(BODIES[bodyIndex]);
     }
 
 }

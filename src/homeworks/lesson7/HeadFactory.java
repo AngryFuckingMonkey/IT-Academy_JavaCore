@@ -1,9 +1,11 @@
 package homeworks.lesson7;
 
-public class HeadFactory implements RobotCreation <Head> {
+public class HeadFactory implements RobotCreation {
 
-    public Robot createRobot(Robot robot, Head head) {
-        return robot;
+    private final Head[] HEADS = Head.values();
+
+    public void createRobotPart(Robot robot, int headIndex) {
+        robot.setHead(HEADS[headIndex]);
     }
 
 }
