@@ -1,8 +1,8 @@
 package homeworks.lesson7;
 
-public class HeadFactory implements RobotCreation {
+public class HeadFactory implements RobotCreation <Head> {
 
-    public Robot createRobot(Robot robot) {
+    public Robot createRobot(Robot robot, Head head) {
         return robot;
     }
 

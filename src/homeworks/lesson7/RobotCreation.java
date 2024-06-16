@@ -1,7 +1,7 @@
 package homeworks.lesson7;
 
-public interface RobotCreation {
+public interface RobotCreation <P> {
 
-    Robot createRobot(Robot robot);
+    Robot createRobot(Robot robot, P robotPart);
 
 }
