@@ -4,35 +4,44 @@ import java.util.HashMap;
 
 public class Garage {
 
-    HashMap<Car, Integer> cars;
+    private HashMap<Car, Integer> cars;
 
-    void parking(Car car) {
-        cars.put(car, equalsCarsCount(car) + 1);
-        if(equalsCarsCount(car) > 1) {
-
-        }
+    public HashMap<Car, Integer> getCars() {
+        return cars;
     }
 
-    void departure(Car car) {
-        for(Car carTemp: cars.keySet()) {
-            if(car.equals(carTemp) && cars.get(car) < cars.get(carTemp)) {
-                cars.replace(carTemp, cars.get(carTemp), cars.get(carTemp) - 1);
+    public void parking(Car car) {
+        if (equalsCarsCount(car) != 0) {
+            for(Car tempCar: cars.keySet()) {
+                if(car.equals(tempCar)) {
+                    cars.replace(tempCar, equalsCarsCount(car) + 1);
+                    break;
+                }
             }
+        } else {
+            cars.put(car, 1);
         }
-        cars.remove(car);
     }
 
-    int certainTypeAutoCounter(Car car) {
+    public void departure(Car car) {
+        if(cars.get(car) == 1) {
+            cars.remove(car);
+        } else {
+            cars.replace(car, equalsCarsCount(car));
+        }
+    }
+
+    public int certainTypeAutoCounter(Car car) {
         int certainTypeAutoNumber = 0;
         for(Car tempCar: cars.keySet()) {
             if(car.getClass().equals(tempCar.getClass())) {
-                certainTypeAutoNumber++;
+                certainTypeAutoNumber += cars.get(tempCar);
             }
         }
         return certainTypeAutoNumber;
     }
 
-    int equalsCarsCount(Car car) {
+    private int equalsCarsCount(Car car) {
         int equalsCarsCount = 0;
         for(Car tempCar: cars.keySet()) {
             if(car.equals(tempCar)) {
@@ -40,6 +49,12 @@ public class Garage {
             }
         }
         return equalsCarsCount;
+    }
+
+    public void showAllCars() {
+        for(Car tempCar: cars.keySet()) {
+            System.out.println(tempCar);
+        }
     }
 
     Garage() {

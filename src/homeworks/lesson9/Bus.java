@@ -8,20 +8,16 @@ public class Bus extends Car {
     }
 
     @Override
-    protected boolean equals(Car car) {
-        return super.equals(car);
-    }
-
-    @Override
     public int hashCode() {
         return super.hashCode();
     }
 
-    Bus(String brand, String model, int vehicleYear, int doorCount, String engine) {
-        super(brand, model, vehicleYear, doorCount, engine);
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 
-    Bus() {
-        super();
+    Bus(String brand, String model, int vehicleYear, int doorCount, String engine) {
+        super(brand, model, vehicleYear, doorCount, engine);
     }
 }

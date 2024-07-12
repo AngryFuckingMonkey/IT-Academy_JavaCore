@@ -8,20 +8,16 @@ public class Offroader extends Car {
     }
 
     @Override
-    protected boolean equals(Car car) {
-        return super.equals(car);
-    }
-
-    @Override
     public int hashCode() {
         return super.hashCode();
     }
 
-    Offroader(String brand, String model, int vehicleYear, int doorCount, String engine) {
-        super(brand, model, vehicleYear, doorCount, engine);
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 
-    Offroader() {
-        super();
+    Offroader(String brand, String model, int vehicleYear, int doorCount, String engine) {
+        super(brand, model, vehicleYear, doorCount, engine);
     }
 }
