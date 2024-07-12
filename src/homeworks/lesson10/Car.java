@@ -9,7 +9,6 @@ public class Car {
     protected final UUID CAR_NUMBER;
     protected int vehicleYear;
     protected boolean isBroken;
-    private final Scanner SCANNER = new Scanner(System.in);
 
     @Override
     public int hashCode() {
@@ -31,6 +30,7 @@ public class Car {
 
     Car() {
         System.out.print("Введите год изготовления автомобиля: ");
+        Scanner SCANNER = new Scanner(System.in);
         try {
             vehicleYear = SCANNER.nextInt();
             if(vehicleYear < 1885 || vehicleYear > 2024) {

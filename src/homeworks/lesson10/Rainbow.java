@@ -1,6 +1,5 @@
 package homeworks.lesson10;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Rainbow {
@@ -15,7 +14,7 @@ public class Rainbow {
         private final String BROWN = "коричневый";
 
         private int colorNum;
-        private Scanner in = new Scanner(System.in);
+        private final Scanner IN = new Scanner(System.in);
 
         private void printMainColor(int colorNum) {
             switch (colorNum) {
@@ -55,7 +54,7 @@ public class Rainbow {
             if (colorNum == 0) {
                 System.out.print("Введите число от 0 до 99: ");
                 try {
-                    colorNum = in.nextInt();
+                    colorNum = IN.nextInt();
                     if (colorNum < 0 || colorNum > 99) {
                         throw new WrongRainbowColorNumberException("You entered the wrong number! Read more careful!");
                     }
@@ -69,7 +68,7 @@ public class Rainbow {
 
             if (colorNum < 10) {
                 printMainColor(colorNum);
-            } else if (colorNum >= 10 || colorNum < 100) {
+            } else {
                 int firstColor = colorNum / 10;
                 int secondColor = colorNum % 10;
 
