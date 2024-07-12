@@ -4,38 +4,34 @@ import java.util.HashMap;
 
 public class Garage {
 
-    private HashMap<Car, Integer> cars;
-
-    public HashMap<Car, Integer> getCars() {
-        return cars;
-    }
+    private final HashMap<Car, Integer> CARS = new HashMap<>();
 
     public void parking(Car car) {
         if (equalsCarsCount(car) != 0) {
-            for(Car tempCar: cars.keySet()) {
+            for(Car tempCar: CARS.keySet()) {
                 if(car.equals(tempCar)) {
-                    cars.replace(tempCar, equalsCarsCount(car) + 1);
+                    CARS.replace(tempCar, CARS.get(tempCar) + 1);
                     break;
                 }
             }
         } else {
-            cars.put(car, 1);
+            CARS.put(car, 1);
         }
     }
 
     public void departure(Car car) {
-        if(cars.get(car) == 1) {
-            cars.remove(car);
+        if(CARS.get(car) == 1) {
+            CARS.remove(car);
         } else {
-            cars.replace(car, equalsCarsCount(car));
+            CARS.replace(car, CARS.get(car) - 1);
         }
     }
 
     public int certainTypeAutoCounter(Car car) {
         int certainTypeAutoNumber = 0;
-        for(Car tempCar: cars.keySet()) {
+        for(Car tempCar: CARS.keySet()) {
             if(car.getClass().equals(tempCar.getClass())) {
-                certainTypeAutoNumber += cars.get(tempCar);
+                certainTypeAutoNumber += CARS.get(tempCar);
             }
         }
         return certainTypeAutoNumber;
@@ -43,7 +39,7 @@ public class Garage {
 
     private int equalsCarsCount(Car car) {
         int equalsCarsCount = 0;
-        for(Car tempCar: cars.keySet()) {
+        for(Car tempCar: CARS.keySet()) {
             if(car.equals(tempCar)) {
                 equalsCarsCount++;
             }
@@ -52,13 +48,9 @@ public class Garage {
     }
 
     public void showAllCars() {
-        for(Car tempCar: cars.keySet()) {
+        for(Car tempCar: CARS.keySet()) {
             System.out.println(tempCar);
         }
-    }
-
-    Garage() {
-        cars = new HashMap<>();
     }
 
 }
