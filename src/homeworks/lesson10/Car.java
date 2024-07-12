@@ -30,17 +30,17 @@ public class Car {
 
     Car() {
         System.out.print("Введите год изготовления автомобиля: ");
-        Scanner SCANNER = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         try {
-            vehicleYear = SCANNER.nextInt();
+            vehicleYear = scanner.nextInt();
             if(vehicleYear < 1885 || vehicleYear > 2024) {
-                throw new DefinitelyWrongVehicleYear("It's really wrong car manufacturing year");
+                throw new DefinitelyWrongVehicleYearException("It's really wrong car manufacturing year");
             }
-        } catch (DefinitelyWrongVehicleYear e) {
+        } catch (DefinitelyWrongVehicleYearException e) {
             System.out.println(e.getMessage());
             while(vehicleYear < 1885 || vehicleYear > 2024) {
                 System.out.print("Please try again: ");
-                vehicleYear = SCANNER.nextInt();
+                vehicleYear = scanner.nextInt();
             }
         } finally {
             System.out.println("Alrighty then!");
