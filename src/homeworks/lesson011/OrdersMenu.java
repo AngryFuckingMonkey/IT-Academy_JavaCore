@@ -42,7 +42,7 @@ public class OrdersMenu extends Menu {
     private void addOrder() {
         Order order = new Order();
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(Util.ORDERS_FILE, true))) {
-            writer.write(order.toString() + System.lineSeparator());
+            writer.write(order + System.lineSeparator());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

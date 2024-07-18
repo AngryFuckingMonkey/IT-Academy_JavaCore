@@ -42,7 +42,7 @@ public class ProductsMenu extends Menu {
     private void addProduct() {
         Product product = new Product();
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(Util.PRODUCTS_FILE, true))) {
-            writer.write(product.toString() + System.lineSeparator());
+            writer.write(product + System.lineSeparator());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
